@@ -15,6 +15,7 @@ public class Note implements Cloneable, Comparable<Note> {
      * Holds value of property text.
      */
     private String text;
+
     private Object value;
 
     /**
@@ -63,8 +64,7 @@ public class Note implements Cloneable, Comparable<Note> {
 
     @Override
     public boolean equals(Object o) {
-        if (o instanceof Note) {
-            Note that = (Note) o;
+        if (o instanceof Note that) {
             return that != null && this.text.equals(that.text);
         } else {
             return false;
@@ -75,5 +75,4 @@ public class Note implements Cloneable, Comparable<Note> {
     public String toString() {
         return text;
     }
-
 }
